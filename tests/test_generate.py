@@ -1,4 +1,3 @@
-import numpy as np
 import networkx as nx
 from bidict import bidict
 from networkx.algorithms import bipartite as B
@@ -22,7 +21,7 @@ def test_smoke():
         for node in p.nodes[:n]:
             key, val = p.decode(node)
             keys.add(key)
-            assert val == None
+            assert val is None
         assert len(keys) == n
 
         f = bidict()

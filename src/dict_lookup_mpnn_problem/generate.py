@@ -1,9 +1,7 @@
 from dataclasses import dataclass
 from collections.abc import Iterator
-from itertools import product
 
 import numpy as np
-from bidict import bidict
 
 
 __all__ = ['ProblemFactory', 'gen_problems']

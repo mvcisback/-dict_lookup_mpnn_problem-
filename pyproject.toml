@@ -6,7 +6,6 @@ authors = [
     { name = "Marcell Vazquez-Chanlatte", email = "mvc@linux.com" }
 ]
 dependencies = [
-    "networkx>=3.4.2",
     "numpy>=2.1.2",
 ]
 readme = "README.md"
@@ -19,10 +18,10 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
+    "networkx>=3.4.2",
     "bpython>=0.24",
     "pytest>=8.3.3",
     "bidict>=0.23.1",
-    "nx>=0.0.0",
 ]
 
 [tool.hatch.metadata]

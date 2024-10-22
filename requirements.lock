@@ -10,7 +10,5 @@
 #   universal: false
 
 -e file:.
-networkx==3.4.2
-    # via dict-lookup-mpnn-problem
 numpy==2.1.2
     # via dict-lookup-mpnn-problem

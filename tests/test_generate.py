@@ -1,5 +1,4 @@
 import networkx as nx
-from bidict import bidict
 from networkx.algorithms import bipartite as B
 
 from dict_lookup_mpnn_problem import gen_problems
@@ -24,7 +23,7 @@ def test_smoke():
             assert val is None
         assert len(keys) == n
 
-        f = bidict()
+        f = dict()
         for answer, node in zip(p.answers, p.nodes[n:]):
             key, val = p.decode(node)
             f[key] = val

@@ -21,7 +21,6 @@ dev-dependencies = [
     "networkx>=3.4.2",
     "bpython>=0.24",
     "pytest>=8.3.3",
-    "bidict>=0.23.1",
 ]
 
 [tool.hatch.metadata]

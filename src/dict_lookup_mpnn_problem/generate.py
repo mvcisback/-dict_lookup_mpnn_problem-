@@ -42,9 +42,8 @@ class ProblemFactory:
     def gen_problem(self) -> Problem:
         n = self.rng.integers(1, self.n_keys, endpoint=True)
         keys = np.arange(n)
-        vals = np.arange(self.n_vals)
         self.rng.shuffle(keys)
-        self.rng.shuffle(vals)
+        vals = self.rng.choice(self.n_vals, n)
 
         # Bipartite adjacency matrix is block anti-diagonal.
         # Further, lookup assumes full connectivity between colors.
@@ -56,7 +55,7 @@ class ProblemFactory:
         key_val_feats = [self.encode(k, v) for k, v in zip(keys, vals)]
         node_feats = np.concat([key_feats, key_val_feats])
         return Problem(n_keys=self.n_keys, nodes=node_feats,
-                       adj=adj_mat, answers=vals[:n])
+                       adj=adj_mat, answers=vals)
 
 
 def gen_problems(n_keys: int, n_vals: int, seed: int = 0) -> Iterator[Problem]:

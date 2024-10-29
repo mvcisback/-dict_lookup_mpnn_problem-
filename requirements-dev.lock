@@ -10,7 +10,6 @@
 #   universal: false
 
 -e file:.
-bidict==0.23.1
 blessed==1.20.0
     # via curtsies
 bpython==0.24
